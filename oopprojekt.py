@@ -47,6 +47,7 @@ class Enemak(Character):
 
     def do_attack(self, hero):
         chosen_attack = self.pc_attack()
+
         if chosen_attack == "normal_attack":
             damage = self.attack
             hero.take_damage(damage)
@@ -87,7 +88,7 @@ while uzivatel.health > 0 and pocitac.health > 0:
     uzivatel.display_stats()
     pocitac.display_stats()
 
-    action = input("Zadejte akci buď heal nebo attack ultima: ").lower()
+    action = input("Zadejte akci buď heal, attack nebo ultima: ")
 
     if action == "attack":
         print("")
